@@ -1,0 +1,52 @@
+<gitmoji> <영역>: <한 줄 요약, 명령문·현재시제>
+# 예: ✨ FR-PI: KR_RRN 체크섬 리코그나이저 추가
+#     🐛 policy: findings_count 타입 오류로 항상 deny되던 버그 수정
+#     📝 requirements: ADR-0007 MCP 전제 수정
+
+# --- 본문 (무엇을·왜, 어떻게가 아니라) ---
+# 비워 둘 수 있음. 2줄 이상이면 반드시 제목과 빈 줄로 띄운다.
+
+
+# --- 꼬리말 ---
+# 요구사항 ID가 있으면 반드시 적는다(CLAUDE.md 2장, 추적성). 여러 개면 전부 나열.
+# Implements FR-PI-01
+#
+# 관련 ADR이 있으면 적는다.
+# Ref: ADR-0007
+#
+# 보안/오픈코어 경계에 영향이 있으면 한 줄로 짚어준다(CLAUDE.md 5장 위협모델).
+# Security-Note: 토큰 금고 평문 로그 없음 확인
+
+# ============================================================
+# 깃모지 치트시트 (자주 쓰는 것만 — 전체는 https://gitmoji.dev)
+# ============================================================
+# ✨  :sparkles:          새 기능
+# 🐛  :bug:               버그 수정
+# 🔒️  :lock:              보안/취약점 수정 (CVE, 시크릿 유출 등)
+# 🔐  :closed_lock_with_key: 시크릿/자격증명 관련 변경
+# ♻️  :recycle:            리팩터링 (동작 변경 없음)
+# 🔥  :fire:               코드/파일 삭제
+# ⚰️  :coffin:             죽은 코드 제거
+# 📝  :memo:               문서 추가/수정
+# ✅  :white_check_mark:   테스트 추가/수정
+# 🧪  :test_tube:          실패하는 테스트 추가 (TDD 레드 단계)
+# 🚨  :rotating_light:     린트/정적분석 경고 수정
+# 🎨  :art:                코드 구조/포맷 개선 (동작 변경 없음)
+# ⚡️  :zap:                성능 개선
+# 👷  :construction_worker: CI 빌드 시스템
+# 💚  :green_heart:        CI 빌드 수정
+# 🔧  :wrench:             설정 파일 변경
+# 🔖  :bookmark:           릴리스/버전 태그
+# ⬆️  :arrow_up:           의존성 업그레이드
+# ⬇️  :arrow_down:         의존성 다운그레이드
+# ➕  :heavy_plus_sign:    의존성 추가
+# ➖  :heavy_minus_sign:   의존성 제거
+# 🏗️  :building_construction: 아키텍처 변경 (ADR급)
+# 🧱  :bricks:             인프라/플러그인 슬롯 관련 변경
+# 🗃️  :card_file_box:      DB/스키마/저장소 관련 변경
+# 🚩  :triangular_flag_on_post: 기능 플래그 추가/수정/제거
+# 🙈  :see_no_evil:        .gitignore 추가/수정
+# 💥  :boom:               破괴적 변경(breaking change)
+# ⏪️  :rewind:             변경 되돌리기(revert)
+# 🚧  :construction:       진행 중인 작업(WIP, merge 전 squash 전제)
+# 🌐  :globe_with_meridians: 국제화/로케일 관련 (로케일 탐지 플러그인 등)

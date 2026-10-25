@@ -1,0 +1,22 @@
+# NFR-SS-05 자가 탐지(gitleaks) 설정.
+#
+# 기본 룰셋(gitleaks 내장)을 그대로 확장해서 쓴다. 허용 목록은 "진짜
+# 시크릿처럼 보이지만 실제로는 아닌 것"만 좁게 적는다 — 전체 파일을
+# 허용 목록에 넣는 식으로 과도하게 넓히지 않는다.
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Cardea 자체 합성 테스트 데이터 — 실제 시크릿/개인정보 아님"
+regexes = [
+  # NFR-DQ-02 평가셋·단위 테스트의 합성 주민등록번호·카드번호(Visa/Mastercard/Amex
+  # 공개 테스트 번호, Luhn만 유효할 뿐 실제 발급된 카드 아님)
+  '''eval/nfr-dq/eval_set\.json''',
+]
+paths = [
+  '''internal/detect/detect_test\.go''',
+  '''internal/vault/vault_test\.go''',
+  '''internal/processor/processor_test\.go''',
+  '''eval/nfr-dq/eval_set\.json''',
+]

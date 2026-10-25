@@ -1,0 +1,24 @@
+name: self-detection (NFR-SS-05)
+
+# Cardea 자신의 로그·코드에도 자기 탐지를 적용한다(CLAUDE.md 4장). gitleaks는
+# ADR-0007이 선택한 자가 탐지 OSS(MIT, 29k+ stars) — 코드/커밋에 시크릿이
+# 새는지 매 push·PR마다 검사한다. 실패하면 머지를 막는다(fail-closed).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  gitleaks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 전체 git 히스토리를 스캔해야 과거 커밋에 섞인 시크릿도 잡는다
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITLEAKS_CONFIG: .gitleaks.toml
