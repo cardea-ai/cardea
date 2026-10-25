@@ -30,4 +30,8 @@ go.work.sum
 
 # Editor/IDE
 # .idea/
-# .vscode/
+.vscode/
+
+# Python bytecode cache (eval/nfr-dq/ 스파이크)
+__pycache__/
+*.pyc
